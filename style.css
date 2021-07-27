@@ -28,6 +28,7 @@ li {
 
 #denominations{
     display: none;
+    margin-bottom: 2rem;
 }
 
 table{
