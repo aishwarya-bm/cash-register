@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+.main{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    background-color: #e491ad;
+    padding: 1rem;
+    max-width: 500px;
+}
+
+ul{
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#cash{
+    display: none;
+}
+
+#denominations{
+    display: none;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td{
+    background-color: beige;
+    padding: 0.4rem;
+}
+
+button{
+    padding: 0.5rem;
+    background-color: palegoldenrod;
+    font-weight: bold;
+    width: 4rem;
+    border: 1px solid;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+input{
+    padding: 0.5rem;
+}
+
+#no-return{
+    display: none;
+    padding-top: 1rem;
+    font-weight: bold;
+}
