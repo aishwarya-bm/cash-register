@@ -3,21 +3,21 @@ var checkBtn = document.getElementById("check");
 
 nextBtn.addEventListener("click", function(){
     if(document.getElementById("bill-amount").value <= 0)
-        alert("Enter postive value for bill amount");
+        alert("Enter value greater than 0 for the amount");
     else 
         document.getElementById("cash").style.display = "block";
 })
 
 checkBtn.addEventListener("click",function(){
-    let billAmt = parseInt(document.getElementById("bill-amount").value);
-    let cashGiven = parseInt(document.getElementById("cash-given").value);
+    let billAmt = Number(document.getElementById("bill-amount").value);
+    let cashGiven = Number(document.getElementById("cash-given").value);
 
     if(cashGiven < 0)
     {
-        alert("Enter positive value for cash given");
+        alert("Enter value greater than 0 for the amounts");
         return;
     }
-    else if(cashGiven < billAmt)
+    if(cashGiven < billAmt)
     {
         alert("Cash given should be greater than or equal to bill amount");
         return;
@@ -26,6 +26,7 @@ checkBtn.addEventListener("click",function(){
     if(cashGiven === billAmt)
     {
         document.getElementById("no-return").style.display = "block";
+        document.getElementById("denominations").style.display = "none";
         return;
     }
     else
@@ -44,6 +45,5 @@ checkBtn.addEventListener("click",function(){
             balance = balance - (den[i] *numOfNotes);
         }
     }
-
     document.getElementById("denominations").style.display = "block";
 });
