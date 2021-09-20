@@ -2,8 +2,8 @@ var nextBtn = document.getElementById("next");
 var checkBtn = document.getElementById("check");
 
 nextBtn.addEventListener("click", function(){
-    if(!document.getElementById("bill-amount").value)
-        alert("Enter the bill amount");
+    if(document.getElementById("bill-amount").value <= 0)
+        alert("Enter postive value for bill amount");
     else 
         document.getElementById("cash").style.display = "block";
 })
@@ -12,9 +12,9 @@ checkBtn.addEventListener("click",function(){
     let billAmt = parseInt(document.getElementById("bill-amount").value);
     let cashGiven = parseInt(document.getElementById("cash-given").value);
 
-    if(!cashGiven)
+    if(cashGiven < 0)
     {
-        alert("Enter the cash given");
+        alert("Enter positive value for cash given");
         return;
     }
     else if(cashGiven < billAmt)
