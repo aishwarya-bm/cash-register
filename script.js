@@ -41,8 +41,11 @@ checkBtn.addEventListener("click",function(){
         if(balance > 0 && balance >= den[i] )
         {
             let numOfNotes = Math.floor( balance/den[i] );
-            document.getElementById(den[i]).innerText = numOfNotes;      
+            document.getElementById(den[i]).innerText = "Rs."+den[i] + " - " +numOfNotes;      
             balance = balance - (den[i] *numOfNotes);
+        }
+        else if(balance < den[i]){
+            document.getElementById(den[i]).innerText = "Rs."+den[i] + " - 0"; 
         }
     }
     document.getElementById("denominations").style.display = "block";
